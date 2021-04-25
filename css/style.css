@@ -23,6 +23,9 @@ body{
 .bg-yellow{
 	background-color: #ffcb0f;
 }
+/*====================================================*/
+/*                    Hero Image                      */
+/*====================================================*/
 .hero-image{
 	background: url("../img/hero-image.png");
 	width: 100%;
@@ -31,6 +34,9 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+/*====================================================*/
+/*                     Welcome Area                   */
+/*====================================================*/
 .welcome-bg{
 	background: url("../img/welcome-blur.png");
 	width: 100%;
@@ -39,60 +45,87 @@ body{
 	background-repeat: no-repeat;
 	margin: 0 auto;
 }
-.circle{
-	position: relative;
+/*====================================================*/
+/*                  Why Choose Us Area                */
+/*====================================================*/
+/* .why-choose-us{
+	background-color: #f2f7fa;
+	z-index: -1000;
+} */
+.circle-col{
+	/* border: 2px solid #000; */
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: "overlap";
 }
 .circle-1{
-		width: 180px!important;
-		height: 180px!important;
-		background: #ffcb0f;
-		border-radius: 50%;
-		position: absolute;
-		opacity: 20%;
+	background-color: #ffcb0f;
+	width:200px;
+	height:200px;
+	border-radius: 50%;
+	opacity: 20%;
+	grid-area: overlap;
+	align-self: center;
+	justify-self: center;
+	z-index: -50;
 }
 .circle-2{
-		width: 160px!important;
-		height: 160px!important;
-		background: #ffcb0f;
-		border-radius: 50%;
-		position: absolute;
-		opacity: 40%;
-		margin-top: 10px;
-		margin-left: 10px;
+	background-color: #ffcb0f;
+	width:180px;
+	height:180px;
+	border-radius: 50%;
+	opacity: 40%;
+	grid-area: overlap;
+	align-self: center;
+	justify-self: center;
+	z-index: -40;
 }
 .circle-3{
-		width: 140px!important;
-		height: 140px!important;
-		background: #ffcb0f;
-		border-radius: 50%;
-		position: absolute;
-		opacity: 60%;
-		margin-top: 20px;
-    	margin-left: 20px;
+	background-color: #ffcb0f;
+	width:160px;
+	height:160px;
+	border-radius: 50%;
+	opacity: 60%;
+	grid-area: overlap;
+	align-self: center;
+	justify-self: center;
+	z-index: -30;
 }
 .circle-4{
-		width: 120px!important;
-		height: 120px!important;
-		background: #ffcb0f;
-		border-radius: 50%;
-		position: absolute;
-		opacity: 80%;
-		margin-top: 30px;
-    	margin-left: 30px;
+	background-color: #ffcb0f;
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	opacity: 80%;
+	grid-area: overlap;
+	align-self: center;
+	justify-self: center;
+	z-index: -20;
 }
 .circle-5{
-	width: 100px!important;
-	height: 100px!important;
-	background: #ffffff;
+	background-color: #fff!important;
+	width: 120px;
+	height: 120px;
 	border-radius: 50%;
-	position: absolute;
-	margin-top: 40px;
-    margin-left: 40px;
+	opacity: 100%;
+	grid-area: overlap;
+	align-self: center;
+	justify-self: center;
+	z-index: -20;
 }
-#why-choose-us-icon{
-	width:100%;
-	height:100%;
-	margin-top: 50%;
-	margin-left: 50%;
-	transform:translateY(-50%);
+.circle-6{
+	grid-area: overlap;
+	align-self: center;
+	justify-self: center;
+	z-index: -10;
+}
+.circle-6 i{
+	font-size: 50px;
+}
+.circle-col h4{
+	justify-self: center;
+}
+.circle-col p{
+	align-self: center;
+	justify-self: center;
 }
