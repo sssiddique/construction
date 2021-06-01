@@ -213,6 +213,41 @@
 </section>
 
 
+<section class="gallery">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="item-menu">
+					<ul>
+						<li data-filter="*">All</li>
+						<li data-filter=".webdesign">Web Design</li>
+						<li data-filter=".webdevelopment">Web Development</li>
+						<li data-filter=".seo">SEO</li>
+						<li data-filter=".graphics">Graphics</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="item-details">
+			<div class="col-md-6 item webdesign">
+				<img src="img/fg-01.png" alt="">
+			</div>
+			<div class="col-md-3 item webdesign">
+				<img src="img/fg-02.png" alt="">
+			</div>
+			<div class="col-md-3 item webdevelopment">
+				<img src="img/fg-03.png" alt="">
+			</div>
+			<div class="col-md-3 item seo">
+				<img src="img/fg-04.png" alt="">
+			</div>
+			<div class="col-md-3 item seo">
+				<img src="img/fg-05.png" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+
 
 
 	<script type="text/javascript" src="js/main.js"></script>
@@ -221,5 +256,18 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+
+	<script>
+		var $grid = $('.item-details').isotope({
+		// options
+		});
+		// filter items on button click
+		$('.item-menu').on( 'click', 'li', function() {
+		var filterValue = $(this).attr('data-filter');
+		$grid.isotope({ filter: filterValue });
+		});
+	</script>
+
+
 </body>
 </html>
