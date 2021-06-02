@@ -219,30 +219,30 @@
 			<div class="col-md-12">
 				<div class="item-menu">
 					<ul>
-						<li data-filter="*">All</li>
-						<li data-filter=".webdesign">Web Design</li>
-						<li data-filter=".webdevelopment">Web Development</li>
-						<li data-filter=".seo">SEO</li>
-						<li data-filter=".graphics">Graphics</li>
+						<li class="active" data-filter="*">Show All</li>
+						<li class="active" data-filter=".building">Buildings</li>
+						<li class="active" data-filter=".interior">Interior Designing</li>
+						<li class="active" data-filter=".isolation">Isolation</li>
+						<li class="active" data-filter=".plumbing">Plumbing</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="item-details">
-			<div class="col-md-6 item webdesign">
-				<img src="img/fg-01.png" alt="">
+		<div class="row product-list">
+			<div class="col-md-6 single-product building">
+				<img src="img/fg-01.png" alt="" class="img-fluid" srcset="">
 			</div>
-			<div class="col-md-3 item webdesign">
-				<img src="img/fg-02.png" alt="">
+			<div class="col-md-3 single-product building">
+				<img src="img/fg-02.png" alt="" class="img-fluid" srcset="">
 			</div>
-			<div class="col-md-3 item webdevelopment">
-				<img src="img/fg-03.png" alt="">
+			<div class="col-md-3 single-product interior">
+				<img src="img/fg-03.png" alt="" class="img-fluid" srcset="">
 			</div>
-			<div class="col-md-3 item seo">
-				<img src="img/fg-04.png" alt="">
+			<div class="col-md-3 single-product isolation">
+				<img src="img/fg-04.png" alt="" class="img-fluid" srcset="">
 			</div>
-			<div class="col-md-3 item seo">
-				<img src="img/fg-05.png" alt="">
+			<div class="col-md-3 single-product plumbing">
+				<img src="img/fg-05.png" alt="" class="img-fluid" srcset="">
 			</div>
 		</div>
 	</div>
@@ -258,14 +258,31 @@
 	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
 
 	<script>
-		var $grid = $('.item-details').isotope({
-		// options
-		});
-		// filter items on button click
-		$('.item-menu').on( 'click', 'li', function() {
-		var filterValue = $(this).attr('data-filter');
-		$grid.isotope({ filter: filterValue });
-		});
+		//Masonary Activate
+			var $grid = $('.product-list').isotope({
+				// set itemSelector so .grid-sizer is not used in layout
+				itemSelector: '.single-product',
+				percentPosition: true,
+				masonry: {
+					// use element for option
+				columnWidth: 1
+				}
+			});
+
+			$('.item-menu').on( 'click', 'li', function() {
+				var filterValue = $(this).attr('data-filter');
+				$grid.isotope({ filter: filterValue });
+			});
+
+			//for menu active class
+			$('.item-menu li').on('click', function(event){
+				$(this).siblings('.active').removeClass('active');
+				$(this).addClass('active');
+				event.preventDefault();
+			});
+	</script>
+
+
 	</script>
 
 

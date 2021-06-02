@@ -149,8 +149,12 @@ body{
 	margin-right:10px;
 	border-radius: 5px;
 }
-.item-menu ul li:hover, .item-menu ul li:active{
+.item-menu ul li:hover{
 	background:tomato;
+	color: #fff;
+}
+.item-menu ul li:active{
+	background:000;
 	color: #fff;
 }
 .item-details{
@@ -164,5 +168,3 @@ body{
 	cursor: pointer;
 	background:tomato;
 }
-.grid-item--width2 { width: 50%; height: 400px; }
-.grid-item--height2 {  width: 25%;height: 200px; }
